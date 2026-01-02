@@ -1,0 +1,221 @@
+/* ===== ADIÇÕES PARA SELETOR DE IDIOMA ===== */
+
+.language-selector {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.lang-btn {
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: var(--transition);
+}
+
+.lang-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.lang-btn.active {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+  .language-selector {
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+}
+
+/* ===== ESTILOS PARA RUBRICAS E ESPECIAL ===== */
+
+.rubricas-section,
+.especiais-section {
+  background-color: var(--white-color);
+  padding: 4rem 0;
+}
+
+.rubricas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.rubrica-card {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.rubrica-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--box-shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.rubrica-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: var(--transition);
+}
+
+.rubrica-card:hover .rubrica-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.rubrica-icon i {
+  font-size: 2rem;
+  color: var(--white-color);
+}
+
+.rubrica-details {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  border-top: 1px solid var(--light-color);
+  padding-top: 1rem;
+}
+
+.rubrica-details li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  color: var(--dark-color);
+  font-size: 0.9rem;
+}
+
+.rubrica-details li i {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+  min-width: 20px;
+}
+
+.especial-section {
+  background-color: var(--light-color);
+  padding: 4rem 0;
+}
+
+.especial-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.especial-item:hover {
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-5px);
+}
+
+.especial-item.reverse .especial-image {
+  order: 2;
+}
+
+.especial-item.reverse .especial-content {
+  order: 1;
+}
+
+.especial-image {
+  height: 100%;
+  overflow: hidden;
+}
+
+.especial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.especial-item:hover .especial-image img {
+  transform: scale(1.05);
+}
+
+.especial-content {
+  padding: 2rem;
+}
+
+.especial-content h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.especial-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.especial-highlights li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  color: var(--dark-color);
+}
+
+.especial-highlights li i {
+  color: var(--accent-color);
+  margin-right: 0.75rem;
+  min-width: 20px;
+}
+
+.especial-info {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--light-color);
+}
+
+.especial-info span {
+  display: flex;
+  align-items: center;
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+.especial-info span i {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 992px) {
+  .especial-item {
+    grid-template-columns: 1fr;
+  }
+
+  .especial-item.reverse .especial-image {
+    order: 1;
+  }
+
+  .especial-item.reverse .especial-content {
+    order: 2;
+  }
+}

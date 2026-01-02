@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria | Palácio de Ferro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Palácio de Ferro</h1>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="historia.html">História</a></li>
+                    <li class="active"><a href="galeria.html">Galeria</a></li>
+                    <!-- <CHANGE> Adicionados novos links no menu -->
+                    <li><a href="rubricas.html">Rubricas</a></li>
+                    <li><a href="especial.html">Especial</a></li>
+                    <li><a href="visita.html">Visita</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Galeria de Imagens</h1>
+        </div>
+    </section>
+
+    <section class="gallery-filters">
+        <div class="container">
+            <!-- <CHANGE> Atualizados os filtros com as novas categorias -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="exposicoes">Exposições</button>
+                <button class="filter-btn" data-filter="corporativos">Corporativos</button>
+                <button class="filter-btn" data-filter="festivais">Festivais</button>
+                <button class="filter-btn" data-filter="concertos">Concertos</button>
+                <button class="filter-btn" data-filter="performances">Performances</button>
+                <button class="filter-btn" data-filter="cinema">Cinema</button>
+                <button class="filter-btn" data-filter="multidisciplinares">Multidisciplinares</button>
+                <button class="filter-btn" data-filter="diversos">Diversos</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-main">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- <CHANGE> Reorganizadas as imagens com as novas categorias -->
+                
+                <!-- EXPOSIÇÕES -->
+                <div class="gallery-item" data-category="exposicoes">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/discurso-exposicao-veCRYDFnwzskWF6N0voAXTqlbsj4FB.jpeg" alt="Exposição Angola Kiesse">
+                    <div class="gallery-caption">
+                        <h3>Exposição Angola Kiesse</h3>
+                        <p>Abertura da exposição cultural</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="exposicoes">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.25%20%281%29-nRQ32vAu2NGXR95kCxR1piqFChccI1.jpeg" alt="Ilustração histórica do Palácio">
+                    <div class="gallery-caption">
+                        <h3>Ilustração Histórica</h3>
+                        <p>Desenho técnico da fachada do Palácio</p>
+                    </div>
+                </div>
+
+                <!-- CORPORATIVOS -->
+                <div class="gallery-item" data-category="corporativos">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/conferencia-interna-20J2JDF2lI6LTqRraUTSidauTgH11G.jpeg" alt="Conferência corporativa">
+                    <div class="gallery-caption">
+                        <h3>Conferência Corporativa</h3>
+                        <p>Palestra em ambiente íntimo</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="corporativos">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/conferencia-auditorio-u1hHjugZIDpJCl0AXGXMqjiWXFstMm.jpeg" alt="Conferência no auditório">
+                    <div class="gallery-caption">
+                        <h3>Auditório Moderno</h3>
+                        <p>Conferência no espaço audiovisual</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="corporativos">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/entrevista-jornalistas-OVzCLyfIZft7dftvz9s6e2mcgNVCvb.jpeg" alt="Entrevista com jornalistas">
+                    <div class="gallery-caption">
+                        <h3>Cobertura Mediática</h3>
+                        <p>Entrevista durante evento cultural</p>
+                    </div>
+                </div>
+
+                <!-- FESTIVAIS -->
+                <div class="gallery-item" data-category="festivais">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-social-noturno-kTyFvV0FvxlOQ2cLRtjflL8Af89vh9.jpeg" alt="Festival cultural noturno">
+                    <div class="gallery-caption">
+                        <h3>Festival Cultural</h3>
+                        <p>Celebração cultural no Palácio de Ferro</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="festivais">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/feira-artesanato-dylIHchjb8nNFHin4cRdEXjZ0I8c5I.jpeg" alt="Feira de artesanato">
+                    <div class="gallery-caption">
+                        <h3>Feira de Artesanato</h3>
+                        <p>Exposição de produtos locais</p>
+                    </div>
+                </div>
+
+                <!-- CONCERTOS -->
+                <div class="gallery-item" data-category="concertos">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-palco-aereo-K6Qex243x6sT0yZ49dUO244PiKRIYf.jpeg" alt="Preparação de palco para concerto">
+                    <div class="gallery-caption">
+                        <h3>Preparação de Concerto</h3>
+                        <p>Vista aérea da montagem do palco</p>
+                    </div>
+                </div>
+
+                <!-- PERFORMANCES -->
+                <div class="gallery-item" data-category="performances">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-noturno-tenda-0uhE8qJaU1fxgsOTfg54hIJ3C5Hubr.jpeg" alt="Performance ao ar livre">
+                    <div class="gallery-caption">
+                        <h3>Performance ao Ar Livre</h3>
+                        <p>Cerimônia formal no pátio do Palácio</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="performances">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/palacio-noturno-evento-Ce3kKKZQb6k0eDA0YSVaRpGZBFqJVm.jpeg" alt="Evento com tapete vermelho">
+                    <div class="gallery-caption">
+                        <h3>Evento Formal</h3>
+                        <p>Cerimônia com tapete vermelho</p>
+                    </div>
+                </div>
+
+                <!-- DIVERSOS -->
+                <div class="gallery-item" data-category="diversos">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.26-Zn2rd43CSRGF321po27uz6JWbOJN6w.jpeg" alt="Fachada principal do Palácio">
+                    <div class="gallery-caption">
+                        <h3>Fachada Principal</h3>
+                        <p>Vista frontal do Palácio de Ferro</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="diversos">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.23%20%281%29-ojM1GhY5mU2eGyfUHbtirZ2J2fY6sD.jpeg" alt="Vista lateral do Palácio">
+                    <div class="gallery-caption">
+                        <h3>Vista Lateral</h3>
+                        <p>Perspectiva lateral da estrutura</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="diversos">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.24-gkUaQhUxu7geNVLgyZxnUQhk45aoNO.jpeg" alt="Entrada do Palácio">
+                    <div class="gallery-caption">
+                        <h3>Entrada Principal</h3>
+                        <p>Vista da entrada com escadarias duplas</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="diversos">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.23-UsZqbypSAH1kWAd34CuWn7oieNe5lr.jpeg" alt="Palácio à noite">
+                    <div class="gallery-caption">
+                        <h3>Vista Noturna</h3>
+                        <p>O Palácio iluminado à noite</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="diversos">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.25-1b6HkdGZ1M19Lmt2oWQTBBraxy0DkU.jpeg" alt="Vista completa do Palácio">
+                    <div class="gallery-caption">
+                        <h3>Vista Completa</h3>
+                        <p>Panorama do edifício histórico</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="diversos">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.24%20%281%29-61QZx2Xfl3feYu5zyDOMZvahJttth4.jpeg" alt="Evento formal">
+                    <div class="gallery-caption">
+                        <h3>Evento Formal</h3>
+                        <p>Cerimônia especial no Palácio</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="diversos">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.24%20%282%29-IbGIFVwAot2ZGWgzmm6OmyJVqjvULJ.jpeg" alt="Vista exterior do Palácio">
+                    <div class="gallery-caption">
+                        <h3>Vista Exterior</h3>
+                        <p>Arquitetura única do Palácio de Ferro</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div class="modal-caption"></div>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Palácio de Ferro</h3>
+                    <p>Patrimônio Cultural de Angola</p>
+                    <p>Luanda, Angola</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="historia.html">História</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="rubricas.html">Rubricas</a></li>
+                        <li><a href="especial.html">Especial</a></li>
+                        <li><a href="visita.html">Visita</a></li>
+                        <li><a href="agenda.html">Agenda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-phone"></i> +244 930749234</p>
+                    <p><i class="fas fa-envelope"></i> info@palaciodeferro.ao</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Palácio de Ferro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

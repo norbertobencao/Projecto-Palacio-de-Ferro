@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Palácio de Ferro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Palácio de Ferro</h1>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" data-translate="nav_inicio">Início</a></li>
+                    <li><a href="historia.html" data-translate="nav_historia">História</a></li>
+                    <li><a href="galeria.html" data-translate="nav_galeria">Galeria</a></li>
+                    <li><a href="visita.html" data-translate="nav_visita">Visita</a></li>
+                    <li><a href="agenda.html" data-translate="nav_agenda">Agenda</a></li>
+                    <li class="active"><a href="contacto.html" data-translate="nav_contacto">Contacto</a></li>
+                    <li><a href="rubricas.html" data-translate="nav_rubricas">Rubricas</a></li>
+                    <li><a href="especial.html" data-translate="nav_especial">Especial</a></li>
+                </ul>
+                <!-- Adicionado seletor de idioma -->
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="pt">PT</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="fr">FR</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-translate="contacto_titulo">Entre em Contacto</h1>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <h2 data-translate="contacto_info_titulo">Informações de Contacto</h2>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3 data-translate="contacto_endereco_titulo">Endereço</h3>
+                            <p>Avenida 4 de Fevereiro, Luanda, Angola</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3 data-translate="contacto_telefone_titulo">Telefone</h3>
+                            <p>+244 930749234</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>info@palaciodeferro.ao</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3 data-translate="contacto_horario_titulo">Horário de Atendimento</h3>
+                            <p data-translate="contacto_horario_texto">Segunda a Sexta: 9h às 17h</p>
+                        </div>
+                    </div>
+                    <div class="social-contact">
+                        <h3 data-translate="contacto_redes_titulo">Redes Sociais</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <h2 data-translate="contacto_form_titulo">Envie-nos uma Mensagem</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-translate="contacto_nome">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-translate="contacto_telefone_titulo">Telefone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-translate="contacto_assunto">Assunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected data-translate="contacto_selecione">Selecione um assunto</option>
+                                <option value="informacao" data-translate="contacto_info_gerais">Informações Gerais</option>
+                                <option value="visita" data-translate="contacto_visitas_grupo">Visitas em Grupo</option>
+                                <option value="evento" data-translate="contacto_eventos">Eventos</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="outro" data-translate="contacto_outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-translate="contacto_mensagem">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter" data-translate="contacto_newsletter">Desejo receber notícias e atualizações sobre o Palácio de Ferro</label>
+                        </div>
+                        <button type="submit" class="btn btn-submit" data-translate="contacto_enviar">Enviar Mensagem</button>
+                    </form>
+                    <div id="form-success" class="form-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h3 data-translate="contacto_sucesso_titulo">Mensagem Enviada!</h3>
+                        <p data-translate="contacto_sucesso_texto">Obrigado pelo seu contacto. Responderemos o mais breve possível.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-contact">
+        <div class="container">
+            <h2 data-translate="faq_titulo">Perguntas Frequentes</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3 data-translate="faq_contacto_grupo_pergunta">Como posso agendar uma visita em grupo?</h3>
+                        <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <p data-translate="faq_contacto_grupo_resposta">Para agendar uma visita em grupo, preencha o formulário de contacto selecionando "Visitas em Grupo" como assunto ou ligue diretamente para o nosso número de telefone.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3 data-translate="faq_contacto_eventos_pergunta">É possível realizar eventos no Palácio de Ferro?</h3>
+                        <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <p data-translate="faq_contacto_eventos_resposta">Sim, o Palácio de Ferro disponibiliza espaços para eventos culturais, exposições e conferências. Entre em contacto connosco para verificar disponibilidade e condições.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3 data-translate="faq_contacto_resposta_pergunta">Quanto tempo demora para receber uma resposta?</h3>
+                        <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <p data-translate="faq_contacto_resposta_texto">Normalmente respondemos a todas as mensagens em até 48 horas úteis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Palácio de Ferro</h3>
+                    <p data-translate="footer_patrimonio">Património Cultural de Angola</p>
+                    <p>Luanda, Angola</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_links">Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html" data-translate="nav_inicio">Início</a></li>
+                        <li><a href="historia.html" data-translate="nav_historia">História</a></li>
+                        <li><a href="galeria.html" data-translate="nav_galeria">Galeria</a></li>
+                        <li><a href="visita.html" data-translate="nav_visita">Visita</a></li>
+                        <li><a href="agenda.html" data-translate="nav_agenda">Agenda</a></li>
+                        <li><a href="contacto.html" data-translate="nav_contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_contacto">Contacto</h3>
+                    <p><i class="fas fa-phone"></i> +244 930749234</p>
+                    <p><i class="fas fa-envelope"></i> info@palaciodeferro.ao</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Palácio de Ferro. <span data-translate="footer_direitos">Todos os direitos reservados</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/translations.js"></script>
+</body>
+</html>

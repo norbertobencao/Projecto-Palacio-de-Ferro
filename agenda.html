@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Eventos | Palácio de Ferro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Palácio de Ferro</h1>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" data-translate="nav_inicio">Início</a></li>
+                    <li><a href="historia.html" data-translate="nav_historia">História</a></li>
+                    <li><a href="galeria.html" data-translate="nav_galeria">Galeria</a></li>
+                    <li><a href="visita.html" data-translate="nav_visita">Visita</a></li>
+                    <li class="active"><a href="agenda.html" data-translate="nav_agenda">Agenda</a></li>
+                    <li><a href="contacto.html" data-translate="nav_contacto">Contacto</a></li>
+                    <li><a href="rubricas.html" data-translate="nav_rubricas">Rubricas</a></li>
+                    <li><a href="especial.html" data-translate="nav_especial">Especial</a></li>
+                </ul>
+                <!-- Adicionado seletor de idioma -->
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="pt">PT</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="fr">FR</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-translate="agenda_titulo">Agenda de Eventos - Junho 2025</h1>
+            <p data-translate="agenda_subtitulo">Mês da Criança - Programação Especial</p>
+        </div>
+    </section>
+
+    <!-- Adicionada imagem oficial da agenda de junho -->
+    <section class="agenda-oficial">
+        <div class="container">
+            <h2 data-translate="agenda_oficial_titulo">Programação Oficial - Junho 2025</h2>
+            <div class="agenda-image-container">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/agenda-junho-VFkCZN8GzjP3IDqekGcV5B5qbKb2A2.jpeg" alt="Agenda Oficial Junho 2025 - Mês da Criança" class="agenda-oficial-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="event-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all" data-translate="filtro_todos">Todos os Eventos</button>
+                <button class="filter-btn" data-filter="teatro" data-translate="filtro_teatro">Teatro</button>
+                <button class="filter-btn" data-filter="concerto" data-translate="filtro_concertos">Concertos</button>
+                <button class="filter-btn" data-filter="literatura" data-translate="filtro_literatura">Literatura</button>
+                <button class="filter-btn" data-filter="feira" data-translate="filtro_feiras">Feiras</button>
+                <button class="filter-btn" data-filter="gospel">Gospel</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="upcoming-events">
+        <div class="container">
+            <h2 data-translate="agenda_eventos_titulo">Eventos de Junho 2025</h2>
+            <div class="events-grid">
+                <!-- Teatro Infantil -->
+                <div class="event-card" data-category="teatro">
+                    <div class="event-date">
+                        <div class="event-day">1</div>
+                        <div class="event-month">Jun</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-tag teatro" data-translate="filtro_teatro">Teatro</div>
+                        <h3>O Abecedário que se Fez de Mudo</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> 15:00</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> <span data-translate="evento_teatro_principal">Teatro Principal</span></p>
+                        <p class="event-description">Peça infantil educativa que ensina o alfabeto de forma divertida e interativa.</p>
+                        <p class="event-price" data-translate="evento_ingresso">Ingresso necessário</p>
+                        <a href="#" class="btn" data-translate="evento_mais_info">Mais Informações</a>
+                    </div>
+                </div>
+
+                <!-- Concerto Omar Gross -->
+                <div class="event-card" data-category="concerto">
+                    <div class="event-date">
+                        <div class="event-day">6</div>
+                        <div class="event-month">Jun</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-tag concerto" data-translate="filtro_concertos">Concerto</div>
+                        <h3>Batida da Alma - Omar Gross</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> 19:00</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> <span data-translate="evento_patio_central">Pátio Central</span></p>
+                        <p class="event-description">Concerto especial com Omar Gross apresentando seus maiores sucessos.</p>
+                        <p class="event-price" data-translate="evento_ingresso">Ingresso necessário</p>
+                        <a href="#" class="btn" data-translate="evento_mais_info">Mais Informações</a>
+                    </div>
+                </div>
+
+                <!-- Literatura Infantil -->
+                <div class="event-card" data-category="literatura">
+                    <div class="event-date">
+                        <div class="event-day">7</div>
+                        <div class="event-month">Jun</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-tag literatura" data-translate="filtro_literatura">Literatura</div>
+                        <h3>Roda de Leitura Infanto-Juvenil</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> 10:00 - 12:00</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> <span data-translate="evento_biblioteca">Biblioteca</span></p>
+                        <p class="event-description">Atividade de leitura e contação de histórias para crianças e jovens.</p>
+                        <p class="event-price" data-translate="evento_gratuito">Entrada Gratuita</p>
+                        <a href="#" class="btn" data-translate="evento_mais_info">Mais Informações</a>
+                    </div>
+                </div>
+
+                <!-- Teatro A Culpa é dos Adultos -->
+                <div class="event-card" data-category="teatro">
+                    <div class="event-date">
+                        <div class="event-day">7</div>
+                        <div class="event-month">Jun</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-tag teatro" data-translate="filtro_teatro">Teatro</div>
+                        <h3>A Culpa é dos Adultos</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> 15:30</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> <span data-translate="evento_teatro_principal">Teatro Principal</span></p>
+                        <p class="event-description">Peça teatral do Grupo Estrela que aborda questões sociais contemporâneas.</p>
+                        <p class="event-price" data-translate="evento_ingresso">Ingresso necessário</p>
+                        <a href="#" class="btn" data-translate="evento_mais_info">Mais Informações</a>
+                    </div>
+                </div>
+
+                <!-- Poesia Dipanda -->
+                <div class="event-card" data-category="literatura">
+                    <div class="event-date">
+                        <div class="event-day">15</div>
+                        <div class="event-month">Jun</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-tag literatura">Poesia</div>
+                        <h3>O Verbo Poético da Dipanda</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> 15:00</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> <span data-translate="evento_auditorio">Auditório</span></p>
+                        <p class="event-description">Maratona infanto-juvenil de poesia celebrando a independência de Angola.</p>
+                        <p class="event-price" data-translate="evento_gratuito">Entrada Gratuita</p>
+                        <a href="#" class="btn" data-translate="evento_mais_info">Mais Informações</a>
+                    </div>
+                </div>
+
+                <!-- Feira Segura Angola -->
+                <div class="event-card" data-category="feira">
+                    <div class="event-date">
+                        <div class="event-day">19-20</div>
+                        <div class="event-month">Jun</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-tag feira" data-translate="filtro_feiras">Feira</div>
+                        <h3>Feira Segura Angola</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> <span data-translate="evento_todo_dia">Todo o dia</span></p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> <span data-translate="evento_patio_exterior">Pátio Exterior</span></p>
+                        <p class="event-description">Feira de segurança e prevenção com atividades educativas para toda a família.</p>
+                        <p class="event-price" data-translate="evento_gratuito">Entrada Gratuita</p>
+                        <a href="#" class="btn" data-translate="evento_mais_info">Mais Informações</a>
+                    </div>
+                </div>
+
+                <!-- Gospel -->
+                <div class="event-card" data-category="gospel">
+                    <div class="event-date">
+                        <div class="event-day">22</div>
+                        <div class="event-month">Jun</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-tag gospel">Gospel</div>
+                        <h3>Gospel no PF - Deixa-me Ser Criança</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> 15:00</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> <span data-translate="evento_patio_central">Pátio Central</span></p>
+                        <p class="event-description">Concerto gospel especial dedicado às crianças com coros locais.</p>
+                        <p class="event-price" data-translate="evento_ingresso">Ingresso necessário</p>
+                        <a href="#" class="btn" data-translate="evento_mais_info">Mais Informações</a>
+                    </div>
+                </div>
+
+                <!-- Africell Art Fair -->
+                <div class="event-card" data-category="feira">
+                    <div class="event-date">
+                        <div class="event-day">25-28</div>
+                        <div class="event-month">Jun</div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-tag feira">Arte</div>
+                        <h3>Africell Luanda Feira de Arte - 2ª Edição</h3>
+                        <p class="event-time"><i class="fas fa-clock"></i> 10:00 - 18:00</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> <span data-translate="evento_galeria">Galeria Principal</span></p>
+                        <p class="event-description">Segunda edição da feira de arte contemporânea africana com artistas locais e internacionais.</p>
+                        <p class="event-price" data-translate="evento_gratuito">Entrada Gratuita</p>
+                        <a href="#" class="btn" data-translate="evento_mais_info">Mais Informações</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="host-event">
+        <div class="container">
+            <div class="host-event-content">
+                <h2 data-translate="agenda_realizar_titulo">Realize seu Evento no Palácio de Ferro</h2>
+                <p data-translate="agenda_realizar_texto">O Palácio de Ferro oferece espaços únicos e históricos para a realização de eventos culturais, corporativos e sociais. Nossos ambientes versáteis podem acomodar desde pequenas reuniões até grandes celebrações.</p>
+                
+                <div class="spaces-grid">
+                    <div class="space-card">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/conferencia-auditorio-u1hHjugZIDpJCl0AXGXMqjiWXFstMm.jpeg" alt="Auditório Moderno">
+                        <h3 data-translate="espaco_auditorio_titulo">Auditório Moderno</h3>
+                        <p data-translate="espaco_auditorio_capacidade">Capacidade: até 200 pessoas</p>
+                        <p data-translate="espaco_auditorio_texto">Equipado com sistema audiovisual completo para conferências e palestras.</p>
+                    </div>
+                    <div class="space-card">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-palco-aereo-K6Qex243x6sT0yZ49dUO244PiKRIYf.jpeg" alt="Pátio Central">
+                        <h3 data-translate="espaco_patio_titulo">Pátio Central</h3>
+                        <p data-translate="espaco_patio_capacidade">Capacidade: até 300 pessoas</p>
+                        <p data-translate="espaco_patio_texto">Perfeito para concertos, apresentações culturais e eventos ao ar livre.</p>
+                    </div>
+                    <div class="space-card">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/feira-artesanato-dylIHchjb8nNFHin4cRdEXjZ0I8c5I.jpeg" alt="Espaço para Feiras">
+                        <h3 data-translate="espaco_feira_titulo">Espaço para Feiras</h3>
+                        <p data-translate="espaco_feira_capacidade">Área flexível</p>
+                        <p data-translate="espaco_feira_texto">Ideal para feiras, exposições e eventos comerciais.</p>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#" class="btn" data-translate="agenda_orcamento">Solicitar Orçamento</a>
+                    <a href="contacto.html" class="btn btn-outline" data-translate="agenda_contacto">Entrar em Contacto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Palácio de Ferro</h3>
+                    <p data-translate="footer_patrimonio">Património Cultural de Angola</p>
+                    <p>Luanda, Angola</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_links">Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html" data-translate="nav_inicio">Início</a></li>
+                        <li><a href="historia.html" data-translate="nav_historia">História</a></li>
+                        <li><a href="galeria.html" data-translate="nav_galeria">Galeria</a></li>
+                        <li><a href="visita.html" data-translate="nav_visita">Visita</a></li>
+                        <li><a href="agenda.html" data-translate="nav_agenda">Agenda</a></li>
+                        <li><a href="contacto.html" data-translate="nav_contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_contacto">Contacto</h3>
+                    <p><i class="fas fa-phone"></i> +244 930749234</p>
+                    <p><i class="fas fa-envelope"></i> info@palaciodeferro.ao</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Palácio de Ferro. <span data-translate="footer_direitos">Todos os direitos reservados</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/agenda.js"></script>
+    <script src="js/translations.js"></script>
+</body>
+</html>
