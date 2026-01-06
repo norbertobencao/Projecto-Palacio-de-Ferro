@@ -163,9 +163,9 @@ body {
   /*font-style: normal;*/
 
 
-   font-family: "Oswald", sans-serif;
-    font-style: normal;
-    font-weight: 600;
+   font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* ===== UTILITÁRIOS ===== */
@@ -269,8 +269,7 @@ a:focus-visible {
   background-size: cover;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover{
   background: var(--accent-color);
   color: var(--white-color);
   transform: translateY(-2px);
@@ -302,6 +301,9 @@ a:focus-visible {
 /* ===== LISTAS ===== */
 ul {
   list-style: none;
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* ===== IMAGENS ===== */
@@ -694,9 +696,13 @@ header .container {
 }
 
 .btn-style{
-  font-family: "Prata", serif;
+   font-family: "Prata", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.btn-style span{
+  font-size: 0.85rem;
 }
 
 .card-img-style{
@@ -1032,17 +1038,19 @@ footer {
 .filter-btn {
   padding: 0.75rem 1.5rem;
   background-color: var(--white-color);
-  border: 2px solid var(--primary-color);
+  /*border: 2px solid var(--primary-color);*/
+  border: 2px solid #f39c12;
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: var(--transition);
   font-weight: 600;
-  color: var(--primary-color);
+  color: #f39c12;
 }
 
 .filter-btn:hover,
 .filter-btn.active {
-  background-color: var(--primary-color);
+  /*background-color: var(--primary-color);*/
+  background-color: #f39c12;
   color: var(--white-color);
   transform: translateY(-2px);
 }
@@ -1106,6 +1114,10 @@ footer {
   color: var(--white-color);
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
+}
+
+.gallery-caption p{
+  font-size: 0.7rem;
 }
 
 /* ===== MODAL ===== */
@@ -1204,7 +1216,8 @@ footer {
   content: "";
   position: absolute;
   width: 4px;
-  background-color: var(--primary-color);
+  /*background-color: var(--primary-color);*/
+  background-color: #f39c12;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -1239,7 +1252,8 @@ footer {
   position: absolute;
   width: 100px;
   height: 100px;
-  background-color: var(--primary-color);
+  /*background-color: var(--primary-color);*/
+  background-color: #f39c12;
   border-radius: 50%;
   top: 0;
   display: flex;
@@ -1267,6 +1281,10 @@ footer {
   transition: var(--transition);
 }
 
+.timeline-content h2{
+  margin-bottom: 2rem;
+}
+
 .timeline-content:hover {
   box-shadow: var(--box-shadow-hover);
   transform: translateY(-5px);
@@ -1276,6 +1294,110 @@ footer {
   margin-top: 1rem;
   border-radius: var(--border-radius);
   overflow: hidden;
+}
+
+/* Medium Screen*/
+@media (max-width: 992px){
+  .timeline-date{
+    display: none;
+  }
+
+  .timeline::before{
+    display: none;
+  }
+
+  .timeline-item{
+    width: 100%;
+  }
+
+  .timeline-content h2{
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    width: 100%;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .timeline-item::after{
+    content: '1998';
+    height: 5rem;
+    width: 5rem;
+    background-color: #f39c12;
+    padding: 1rem;
+    position: absolute;
+    top: -0.8rem;
+    left: 1rem;
+    border-radius: 100%;
+    color: white;
+    font-family: "Prata", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timeline-container .timeline-item:nth-child(1)::after{
+    content: '1890';
+  }
+
+  .timeline-container .timeline-item:nth-child(2)::after{
+    content: '1891';
+  }
+
+  .timeline-container .timeline-item:nth-child(3)::after{
+    content: '1892';
+  }
+
+  .timeline-container .timeline-item:nth-child(4)::after{
+    content: '1900-1950';
+    font-size: 0.8rem;
+  }
+
+  .timeline-container .timeline-item:nth-child(5)::after{
+    content: '1975';
+  }
+
+  .timeline-container .timeline-item:nth-child(6)::after{
+    content: '2010';
+  }
+
+  .timeline-container .timeline-item:nth-child(7)::after{
+    content: 'Hoje';
+  }
+
+}
+
+/* Small Screen*/
+@media (max-width: 800px){
+  .page-header{
+    height: 10rem;
+  }
+
+  .page-header h1{
+    font-size: 1.8rem;
+  }
+
+  .timeline-content p{
+    font-size: 0.9rem;
+  }
+
+  .timeline-item::after{
+    height: 4rem;
+    width: 4rem;
+    top: -0.6rem;
+    left: 1.8rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* ===== FACTS ===== */
@@ -1336,16 +1458,633 @@ footer {
   transition: var(--transition);
 }
 
+.Info-card p{
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.Info-card i{
+  color: #f39c12;
+  font-size: 2.5rem;
+}
+
 .info-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--box-shadow-hover);
 }
 
+.info-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.info-card ul {
+  text-align: left;
+  margin: 1.5rem 0;
+}
+
+.info-card ul li {
+  margin-bottom: 0.75rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.info-card ul li::before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+/* ===== MAP ===== */
+.map-container {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  margin-top: 2rem;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+
 /* MELHORIAS NA SEÇÃO DE EVENTOS - Animações suaves e interatividade */
 
-.upcoming-events {
+/*.upcoming-events {
   background: linear-gradient(135deg, var(--light-color) 0%, rgba(139, 69, 19, 0.02) 100%);
   padding: 5rem 0;
   position: relative;
   overflow: hidden;
+}*/
+
+/* ===== TOURS ===== */
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tour-card {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.tour-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.tour-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.tour-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.tour-card:hover .tour-image img {
+  transform: scale(1.1);
+}
+
+.tour-content {
+  padding: 1.5rem;
+}
+
+.tour-content p:nth-of-type(1){
+  font-size: 0.9rem;
+  margin-top: 1.3rem;
+}
+
+.tour-content h6{
+  font-size: 1.4rem;
+  color: #f39c12;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.tour-content h3{
+  font-weight: 400;
+}
+
+.tour-content ul {
+  margin: 1rem 0;
+}
+
+.tour-content ul li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.tour-content ul li i {
+  color: #f39c12;
+  margin-right: 0.75rem;
+  min-width: 16px;
+}
+
+/* ===== ACCORDION ===== */
+.accordion {
+  margin-top: 2rem;
+}
+
+.accordion-item {
+  /* margin-bottom: 1rem; */
+  /* border-radius: var(--border-radius); */
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  background-color: var(--white-color);
+}
+
+/*.accordion-header {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+  background-color: var(--white-color);
+}*/
+
+.accordion-header:hover {
+  background-color: var(--light-color);
+} 
+
+.accordion-header button{
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.accordion-body{
+  font-size: 1rem;
+}
+
+.accordion-header h3 {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  color: var(--dark-color);
+}
+
+.accordion-icon i {
+  transition: var(--transition);
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+/* Adicionar animação para o accordion */
+.accordion-content {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  will-change: max-height, padding;
+}
+
+.accordion-item.active .accordion-content {
+  padding: 1.5rem;
+  max-height: 500px;
+}
+
+.accordion-item.active .accordion-icon i {
+  transform: rotate(45deg);
+}
+
+/* ===== CONTACT ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+}
+
+.contact-details {
+  background-color: var(--white-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  height: fit-content;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-right: 1rem;
+  min-width: 30px;
+  margin-top: 0.25rem;
+}
+
+.contact-text h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+.contact-text p {
+  margin-bottom: 0;
+  color: var(--dark-color);
+}
+
+.social-contact {
+  margin-top: 2rem;
+}
+
+.social-contact .social-icons {
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 50%;
+  transition: var(--transition);
+  margin-right: 0.75rem;
+}
+
+.social-icon:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+
+/* #################### RUBRCIAS #############################*/
+.card{
+  overflow: hidden;
+  position: relative;
+}
+
+.card-title{
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.card-text{
+  font-size: 1.1rem;
+  z-index: 2;
+}
+
+.rubrica-details button{
+  border: none;
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-family: 'oswald';
+  font-style: normal;
+}
+
+.rubrica-details li i{
+  margin-right: 0.5rem;
+}
+
+.card-span{
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  z-index: 2;
+}
+
+.card-span h6{
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.card-span h6 span{
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.card-img-top{
+  height: 16rem;
+}
+
+.card-animation-img{
+  width: 14rem;
+  height: 14rem;
+  position: absolute;
+  bottom: -13rem;
+  right: -7rem;
+  transform: rotate(10deg);
+  transition: .4s ease-in;
+}
+
+.card:hover .card-animation-img{
+  width: 14rem;
+  height: 14rem;
+  position: absolute;
+  bottom: -3rem;
+  right: -7rem;
+  transform: rotate(10deg);
+}
+
+.card-top-inf{
+  position: absolute;
+  padding: 0.5rem 1rem;
+  top: 1rem;
+  left: 1rem;
+  background-color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9rem;
+  width: 6.5rem;
+  border-radius: 0.8rem;
+}
+
+/* ########################## EVENTS PAGE ##############################
+/* ===== EVENTS ===== */
+.upcoming-events {
+  background-color: var(--light-color);
+}
+
+.upcoming-events div h2{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.event-card {
+  display: flex;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+/* Melhorar a animação do event-card.highlight */
+.event-card.highlight {
+  box-shadow: 0 0 20px rgba(139, 69, 19, 0.7);
+  transform: scale(1.02);
+  animation: pulse 2s ease-in-out;
+  will-change: transform, box-shadow;
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 90px;
+  /*background-color: var(--primary-color);*/
+  background-color: #f39c12;
+  color: var(--white-color);
+  padding: 1.5rem 1rem;
+}
+
+.event-day {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.event-month {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+
+.event-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--white-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.event-tag.teatro {
+  background-color: var(--teatro-color);
+}
+.event-tag.concerto {
+  background-color: var(--concerto-color);
+}
+.event-tag.literatura {
+  background-color: var(--literatura-color);
+}
+.event-tag.feira {
+  background-color: var(--feira-color);
+}
+.event-tag.gospel {
+  background-color: var(--gospel-color);
+}
+
+.event-content h3 {
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+  font-size: 1.3rem;
+}
+
+
+.event-time,
+.event-location {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+  display: flex;
+  align-items: center;
+}
+
+.event-time i,
+.event-location i {
+  margin-right: 0.5rem;
+  color: #f39c12;
+  font-size: 1rem;
+}
+
+.event-description {
+  margin: 1rem 0;
+  line-height: 1.5;
+  font-family: 2rem;
+}
+
+.event-price {
+  font-weight: 600;
+  color: #f39c12;
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* ===== HOST EVENT ===== */
+.host-event {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../public/images/host-event-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--white-color);
+  padding: 5rem 0;
+}
+
+.host-event-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.host-event-content h2 {
+  color: var(--white-color);
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+}
+
+.host-event-content > p {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);*/
+}
+
+.spaces-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.space-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.space-card:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.space-card img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+}
+
+.space-card h3 {
+  color: var(--white-color);
+  margin: 1rem 0;
+  padding: 0 1rem;
+  font-size: 2rem;
+}
+
+.space-card p {
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.fa-star{
+  color: #f39c12;
+  margin-right: 0.5rem;
+}
+
+
+/*##################### CONTACTOS ###############*/
+.contact-card{
+  color: #DBDBDB;
+  background-image: url(../public/images/contact-card-bg-3.jpg);
+}
+
+.contact-card-inf span{
+  font-size: 0.8rem;
+  /* font-family: "Prata", serif; */
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #8C8C8C;
+}
+
+.contact-card-inf h3{
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 0.4rem;
+}
+
+.contact-card-inf p{
+  font-size: 0.9rem;
+  color: #8C8C8C;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.contact-card-inf div i{
+  font-size: 5rem;
+  margin: 1.5rem 0;
+}
+
+.contact-us-header{
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.contact-phone-icon{
+  font-size: 5rem;
+  margin: 2rem 0;
+}
+
+.contact-card-send-email{
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  
 }

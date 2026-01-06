@@ -5,46 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>História | Palácio de Ferro</title>
     <link rel="stylesheet" href="css/style.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Palácio de Ferro</h1>
+        <nav class="px-5 py-4 navbar navbar-expand-md" style="background-color: transparent;">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-5 fs-5" href="#" style="color: #F79A00; font-weight: 500;">Palácio de ferro</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end me-5" id="navbarNav">
+                    <ul class="navbar-nav row gap-2">
+                        <li class="nav-item col">
+                            <a class="nav-link" aria-current="page" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link active" href="historia.html">História</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="galeria.html">Galeria</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="rubricas.html">Rubricas</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="especial.html">Especial</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="visita.html">Visita</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="agenda.html">Agenda</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <nav>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html" data-translate="nav_inicio">Início</a></li>
-                    <li class="active"><a href="historia.html" data-translate="nav_historia">História</a></li>
-                    <li><a href="galeria.html" data-translate="nav_galeria">Galeria</a></li>
-                    <li><a href="visita.html" data-translate="nav_visita">Visita</a></li>
-                    <li><a href="agenda.html" data-translate="nav_agenda">Agenda</a></li>
-                    <li><a href="contacto.html" data-translate="nav_contacto">Contacto</a></li>
-                    <li><a href="rubricas.html" data-translate="nav_rubricas">Rubricas</a></li>
-                    <li><a href="especial.html" data-translate="nav_especial">Especial</a></li>
-                </ul>
-                <!-- Adicionado seletor de idioma -->
-                <div class="language-selector">
-                    <button class="lang-btn active" data-lang="pt">PT</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="fr">FR</button>
-                </div>
-            </nav>
-        </div>
+        </nav>
     </header>
 
-    <section class="page-header">
-        <div class="container">
+    <section class="page-header background-img-styled" style="background-image: url(./public/images/cta-background.avif);">
+        <div class="container justify-content-center align-items-center">
             <h1 data-translate="historia_titulo">História do Palácio de Ferro</h1>
         </div>
     </section>
 
     <section class="timeline">
-        <div class="container">
+        <div class="timeline-container">
+            
             <div class="timeline-item">
                 <div class="timeline-date">
                     <h3>1890</h3>
@@ -83,7 +119,7 @@
 
             <div class="timeline-item">
                 <div class="timeline-date">
-                    <h3>1900-1950</h3>
+                    <h3><span>1900</span><br><span>-1950</span></h3>
                 </div>
                 <div class="timeline-content">
                     <h2 data-translate="historia_1900_titulo">Diferentes Usos</h2>
@@ -128,29 +164,41 @@
 
     <section class="facts">
         <div class="container">
-            <h2 data-translate="curiosidades_titulo">Curiosidades</h2>
-            <div class="facts-container">
-                <div class="fact-box">
-                    <i class="fas fa-building"></i>
-                    <h3 data-translate="curiosidade_arquitetura_titulo">Arquitetura</h3>
-                    <p data-translate="curiosidade_arquitetura_texto">O Palácio de Ferro é um exemplo raro de arquitetura em ferro do final do século XIX, com elementos decorativos Art Nouveau.</p>
+            <h2 class="fs-1 pt-4 mb-4" style="font-weight: 450;" data-translate="curiosidades_titulo">Curiosidades</h2>
+        
+            <div class="row justify-content-center px-5">
+                <div class="col-sm-7 col-md-6 col-lg-4 col-xl-3 mb-4">
+                    <div class="mb-4" style="font-size: 10.5pt;">
+                        <i class="fs-1 bi bi-bank text-dark"></i>
+                        <h3 class="fs-5 mt-2 mb-3" data-translate="curiosidade_arquitetura_titulo">Arquitetura</h3>
+                        <p data-translate="curiosidade_arquitetura_texto">O Palácio de Ferro é um exemplo raro de arquitetura em ferro do final do século XIX, com elementos decorativos Art Nouveau.</p>
+                    </div>
                 </div>
-                <div class="fact-box">
-                    <i class="fas fa-ship"></i>
-                    <h3 data-translate="curiosidade_origem_titulo">Origem</h3>
-                    <p data-translate="curiosidade_origem_texto">Existem teorias de que o edifício foi originalmente destinado ao Egito ou Madagascar, mas acabou sendo enviado para Angola.</p>
+
+                <div class="col-sm-7 col-md-6 col-lg-4 col-xl-3 mb-4">
+                    <div class="mb-4" style="font-size: 10.5pt;">
+                        <i class="fs-1 mt-3 fas fa-ship text-dark"></i>
+                        <h3 class="fs-5 mt-2 mb-3" data-translate="curiosidade_origem_titulo">Origem</h3>
+                        <p data-translate="curiosidade_origem_texto">Existem teorias de que o edifício foi originalmente destinado ao Egito ou Madagascar, mas acabou sendo enviado para Angola.</p>
+                    </div>
                 </div>
-                <div class="fact-box">
-                    <i class="fas fa-temperature-high"></i>
-                    <h3 data-translate="curiosidade_clima_titulo">Adaptação Climática</h3>
-                    <p data-translate="curiosidade_clima_texto">A estrutura foi projetada com considerações especiais para o clima tropical de Angola, incluindo ventilação natural.</p>
+
+                <div class="col-sm-7 col-md-6 col-lg-4 col-xl-3 mb-4">
+                    <div class="mb-4" style="font-size: 10.5pt;">
+                        <i class="fs-1 mt-3 text-dark bi bi-thermometer-sun"></i>
+                        <h3 class="fs-5 mt-2 mb-3" data-translate="curiosidade_clima_titulo">Adaptação Climática</h3>
+                        <p data-translate="curiosidade_clima_texto">A estrutura foi projetada com considerações especiais para o clima tropical de Angola, incluindo ventilação natural.</p>
+                    </div>
                 </div>
-                <div class="fact-box">
-                    <i class="fas fa-award"></i>
-                    <h3 data-translate="curiosidade_reconhecimento_titulo">Reconhecimento</h3>
-                    <p data-translate="curiosidade_reconhecimento_texto">O Palácio de Ferro é considerado um dos exemplos mais importantes da arquitetura colonial em África.</p>
+
+                <div class="col-sm-7 col-md-6 col-lg-4 col-xl-3 mb-4">
+                    <div class="mb-4" style="font-size: 10.5pt;">
+                        <i class="fs-1 mt-3 text-dark fas fa-award"></i>
+                        <h3 class="fs-5 mt-2 mb-3" data-translate="curiosidade_reconhecimento_titulo">Reconhecimento</h3>
+                        <p data-translate="curiosidade_reconhecimento_texto">O Palácio de Ferro é considerado um dos exemplos mais importantes da arquitetura colonial em África.</p>
+                    </div>
                 </div>
-            </div>
+                
         </div>
     </section>
 
