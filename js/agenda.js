@@ -27,24 +27,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
           setTimeout(() => {
             card.style.display = "block"
-
-            if (!prefersReducedMotion) {
+            
+            // Reset dos estilos inline antes de aplicar novos
+            if (prefersReducedMotion) {
+              card.style.opacity = "1"
+              card.style.transform = "none"
+              card.style.transition = "none"
+            } else {
               // Força reflow para ativar a animação
               card.offsetHeight
 
               card.classList.add("filtered-in")
               card.style.opacity = "1"
               card.style.transform = "translateX(0)"
-            } else {
-              card.style.opacity = "1"
-              card.style.transform = "none"
+              card.style.transition = "opacity 0.4s ease, transform 0.4s ease"
             }
           }, delay)
         } else {
           if (!prefersReducedMotion) {
-            card.classList.add("filtered-out")
             card.style.opacity = "0"
             card.style.transform = "translateX(-30px)"
+            card.style.transition = "opacity 0.4s ease, transform 0.4s ease"
+            card.classList.add("filtered-out")
 
             // Hide após animação
             setTimeout(() => {
@@ -53,6 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
           } else {
             card.style.display = "none"
             card.style.opacity = "1"
+            card.style.transform = "none"
+            card.style.transition = "none"
           }
         }
       })
@@ -72,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const btn = this.querySelector(".btn")
         if (btn) {
           btn.style.transform = "translateY(-2px)"
+          btn.style.transition = "transform 0.3s ease"
         }
       }
     })
@@ -81,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const btn = this.querySelector(".btn")
         if (btn) {
           btn.style.transform = "translateY(0)"
+          btn.style.transition = "transform 0.3s ease"
         }
       }
     })

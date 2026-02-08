@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palácio de Ferro | Patrimônio Cultural de Angola</title>
-    <meta name="description" content="Descubra o Palácio de Ferro, um dos mais importantes monumentos históricos de Angola. Visite este patrimônio cultural único em Luanda.">
+    <title>Palácio de Ferro | Património Cultural de Angola</title>
+    <meta name="description"
+        content="Descubra o Palácio de Ferro, um dos mais importantes monumentos históricos de Angola. Visite este patrimônio cultural único em Luanda.">
     <meta name="keywords" content="Palácio de Ferro, Angola, Luanda, patrimônio cultural, arquitetura, história">
-    
+
     <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,101 +37,95 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+        rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <nav class="px-5 py-4 navbar navbar-expand-md" style="background-color: transparent;">
-            <div class="container-fluid">
-                <a class="navbar-brand ms-5 fs-5" href="#" style="color: #F79A00; font-weight: 500;">Palácio de ferro</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end me-5" id="navbarNav">
-                    <ul class="navbar-nav row gap-2">
-                        <li class="nav-item col">
-                            <a class="nav-link active" aria-current="page" href="index.html">Início</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="historia.html">História</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="galeria.html">Galeria</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="rubricas.html">Rubricas</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="especial.html">Especial</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="visita.html">Visita</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="agenda.html">Agenda</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <header id="navbar">
+        <script>
+            fetch("./componentes/navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar").innerHTML = data;
+                });
+        </script>
     </header>
 
     <main>
         <section class="hero" aria-label="Apresentação principal">
             <div class="hero-slider">
                 <div class="slide active">
-                    <div class="slide-bg" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.26-Zn2rd43CSRGF321po27uz6JWbOJN6w.jpeg')"></div>
+                    <div class="slide-bg"
+                        style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.26-Zn2rd43CSRGF321po27uz6JWbOJN6w.jpeg')">
+                    </div>
                     <div class="hero-content">
                         <h1 class="text-uppercase">Bem-vindo ao Palácio de Ferro</h1>
-                        <p>Um ícone arquitetônico e patrimônio cultural de Angola</p>
-                        <button class="hero-content-btn py-2 rounded-5 py-2"><a href="historia.html" class="link-underline link-underline-opacity-0 px-4 text-white fs-6" aria-label="Descobrir a história do Palácio de Ferro">Descubra a História</a></button>
+                        <p>Um ícone arquitetônico e património cultural de Angola</p>
+                        <button class="hero-content-btn py-2 rounded-5 py-2"><a href="historia.html"
+                                class="link-underline link-underline-opacity-0 px-4 text-white fs-6"
+                                aria-label="Descobrir a história do Palácio de Ferro">Descubra a História</a></button>
                     </div>
                 </div>
 
                 <div class="slide">
-                    <div class="slide-bg" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/palacio-noturno-evento-Ce3kKKZQb6k0eDA0YSVaRpGZBFqJVm.jpeg')"></div>
+                    <div class="slide-bg"
+                        style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/palacio-noturno-evento-Ce3kKKZQb6k0eDA0YSVaRpGZBFqJVm.jpeg')">
+                    </div>
                     <div class="hero-content">
                         <h1>Eventos Culturais</h1>
                         <p>Espaço único para eventos memoráveis em Luanda</p>
-                        <button class="hero-content-btn py-2 rounded-5 py-2"><a href="agenda.html" class="link-underline link-underline-opacity-0 px-4 text-white fs-6" aria-label="Ver agenda de eventos">Ver Agenda</a></button>
+                        <button class="hero-content-btn py-2 rounded-5 py-2"><a href="agenda.html"
+                                class="link-underline link-underline-opacity-0 px-4 text-white fs-6"
+                                aria-label="Ver agenda de eventos">Ver Agenda</a></button>
                     </div>
                 </div>
 
                 <div class="slide">
-                    <div class="slide-bg" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-noturno-tenda-0uhE8qJaU1fxgsOTfg54hIJ3C5Hubr.jpeg')"></div>
+                    <div class="slide-bg"
+                        style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-noturno-tenda-0uhE8qJaU1fxgsOTfg54hIJ3C5Hubr.jpeg')">
+                    </div>
                     <div class="hero-content">
-                        <h1>Patrimônio Vivo</h1>
+                        <h1>Património Vivo</h1>
                         <p>Onde a história e a cultura se encontram</p>
-                        <button class="hero-content-btn py-2 rounded-5 py-2"><a href="visita.html" class="link-underline link-underline-opacity-0 px-4 text-white fs-6" aria-label="Informações para visita">Visite-nos</a></button>
+                        <button class="hero-content-btn py-2 rounded-5 py-2"><a href="visita.html"
+                                class="link-underline link-underline-opacity-0 px-4 text-white fs-6"
+                                aria-label="Informações para visita">Visite-nos</a></button>
                     </div>
                 </div>
 
                 <div class="slide">
-                    <div class="slide-bg" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/discurso-exposicao-veCRYDFnwzskWF6N0voAXTqlbsj4FB.jpeg')"></div>
+                    <div class="slide-bg"
+                        style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/discurso-exposicao-veCRYDFnwzskWF6N0voAXTqlbsj4FB.jpeg')">
+                    </div>
                     <div class="hero-content">
                         <h1>Exposições e Arte</h1>
                         <p>Celebrando a cultura e arte angolana</p>
-                        <button class="hero-content-btn py-2 rounded-5 py-2"><a href="galeria.html" class="link-underline link-underline-opacity-0 px-4 text-white fs-6" aria-label="Ver galeria de imagens">Ver Galeria</a></button>
+                        <button class="hero-content-btn py-2 rounded-5 py-2"><a href="galeria.html"
+                                class="link-underline link-underline-opacity-0 px-4 text-white fs-6"
+                                aria-label="Ver galeria de imagens">Ver Galeria</a></button>
                     </div>
                 </div>
 
                 <div class="slide">
-                    <div class="slide-bg" style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-social-noturno-kTyFvV0FvxlOQ2cLRtjflL8Af89vh9.jpeg')"></div>
+                    <div class="slide-bg"
+                        style="background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-social-noturno-kTyFvV0FvxlOQ2cLRtjflL8Af89vh9.jpeg')">
+                    </div>
                     <div class="hero-content">
                         <h1>Eventos Sociais</h1>
                         <p>Celebrações culturais no coração de Luanda</p>
-                        <button class="hero-content-btn py-2 rounded-5 py-2"><a href="rubricas.html" class="link-underline link-underline-opacity-0 px-4 text-white fs-6" aria-label="Ver rubricas culturais">Ver Rubricas</a></button>
+                        <button class="hero-content-btn py-2 rounded-5 py-2"><a href="rubricas.html"
+                                class="link-underline link-underline-opacity-0 px-4 text-white fs-6"
+                                aria-label="Ver rubricas culturais">Ver Rubricas</a></button>
                     </div>
                 </div>
             </div>
-            
+
             <div class="slider-controls">
                 <button class="slider-prev" aria-label="Slide anterior">
                     <i class="fas fa-chevron-left"></i>
@@ -132,7 +134,7 @@
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
-            
+
             <div class="slider-indicators" role="tablist" aria-label="Indicadores do slider">
                 <button class="indicator active" data-slide="0" role="tab" aria-label="Slide 1"></button>
                 <button class="indicator" data-slide="1" role="tab" aria-label="Slide 2"></button>
@@ -146,18 +148,18 @@
             <div class="feature row justify-content-center">
                 <div class="feature-box col-sm-4 col-lg-3">
                     <i class="bi bi-bank"></i>
-                    <h3>Patrimônio Cultural</h3>
+                    <h3>Património Cultural</h3>
                     <p>Conheça um dos mais importantes monumentos históricos de Angola.</p>
                 </div>
 
                 <div class="feature-box col-sm-4 col-lg-3">
-                     <i class="bi bi-clock-history"></i>
+                    <i class="bi bi-clock-history"></i>
                     <h3>História Rica</h3>
                     <p>Descubra a fascinante história do Palácio de Ferro desde o século XIX.</p>
                 </div>
 
                 <div class="feature-box col-sm-4 col-lg-3">
-                     <i class="bi bi-camera"></i>
+                    <i class="bi bi-camera"></i>
                     <h3>Arquitetura Única</h3>
                     <p>Admire a estrutura metálica e o design único deste edifício histórico.</p>
                 </div>
@@ -181,14 +183,20 @@
         <section class="mb-5 container">
             <div class="row justify-content-center container-fluid">
                 <div class="card-img-style col-sm-12 col-lg-6 col-xl-3 mx-5 rounded-4 rounded-lg-6">
-                
+
                 </div>
 
                 <div class="col-sm-12 col-lg-6 col-xl-4">
                     <h3 class="img-text-align-header">Saiba mais sobre o Palácio de ferro</h3>
-                    <p class="img-text-align-text mb-2">Localizado na baixa de Luanda, o Palácio de Ferro é um edifício histórico de Luanda, que as fontes históricas acreditam ser da autoria de Gustave Eiffel, o mesmo que desenhou a Torre Eiffel, em Paris, França, a estrutura está composta por um piso e três salas de exposições.</p>
-                    <p class="img-text-align-text">O edifício possuiu uma original decoração em filigrana metálica e tem um soberbo avarandado envolvente, sendo o melhor exemplar da arquitectura de ferro em Luanda e em Angola.</p>
-                    <a href="#" class="btn-style"><button class="btn-style btn btn-warning px-4 py-2 rounded-5 fs-6">Saber mais</button></a>
+                    <p class="img-text-align-text mb-2">Localizado na baixa de Luanda, o Palácio de Ferro é um edifício
+                        histórico de Luanda, que as fontes históricas acreditam ser da autoria de Gustave Eiffel, o
+                        mesmo que desenhou a Torre Eiffel, em Paris, França, a estrutura está composta por um piso e
+                        três salas de exposições.</p>
+                    <p class="img-text-align-text">O edifício possuiu uma original decoração em filigrana metálica e tem
+                        um soberbo avarandado envolvente, sendo o melhor exemplar da arquitectura de ferro em Luanda e
+                        em Angola.</p>
+                    <a href="#" class="btn-style"><button
+                            class="btn-style btn btn-warning px-4 py-2 rounded-5 fs-6">Saber mais</button></a>
                 </div>
             </div>
         </section>
@@ -196,17 +204,19 @@
         <section class="gallery-preview">
             <div class="container py-4">
                 <h2 class="mb-4">Galeria de Imagens</h2>
-          
+
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
                         <a href="galeria.html">
                             <div class="gallery-card rounded-4" style="position: relative; overflow: hidden;">
                                 <div>
-                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-social-noturno-kTyFvV0FvxlOQ2cLRtjflL8Af89vh9.jpeg" alt="Evento Social no Palácio de Ferro" loading="lazy">
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-social-noturno-kTyFvV0FvxlOQ2cLRtjflL8Af89vh9.jpeg"
+                                        alt="Evento Social no Palácio de Ferro" loading="lazy">
                                 </div>
 
                                 <div class="gallery-card-content d-flex justify-content-center align-items-center">
-                                    <p class="fs-6 text-white"><span class="me-3">Ver mais</span><span><i class="bi bi-eye-fill"></i></span></p>
+                                    <p class="fs-6 text-white"><span class="me-3">Ver mais</span><span><i
+                                                class="bi bi-eye-fill"></i></span></p>
                                 </div>
                             </div>
                         </a>
@@ -216,17 +226,19 @@
                         <a href="galeria.html">
                             <div class="gallery-card rounded-4" style="position: relative; overflow: hidden;">
                                 <div>
-                                     <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/conferencia-auditorio-u1hHjugZIDpJCl0AXGXMqjiWXFstMm.jpeg" alt="Conferência no Auditório" loading="lazy">
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/conferencia-auditorio-u1hHjugZIDpJCl0AXGXMqjiWXFstMm.jpeg"
+                                        alt="Conferência no Auditório" loading="lazy">
                                 </div>
 
                                 <div class="gallery-card-content d-flex justify-content-center align-items-center">
-                                    <p class="fs-6 text-white"><span class="me-3">Ver mais</span><span><i class="bi bi-eye-fill"></i></span></p>
+                                    <p class="fs-6 text-white"><span class="me-3">Ver mais</span><span><i
+                                                class="bi bi-eye-fill"></i></span></p>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    
+
 
                     <!-- <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/conferencia-auditorio-u1hHjugZIDpJCl0AXGXMqjiWXFstMm.jpeg" alt="Conferência no Auditório" loading="lazy">
@@ -236,10 +248,12 @@
                         <a href="galeria.html">
                             <div class="gallery-card rounded-4" style="position: relative; overflow: hidden;">
                                 <div>
-                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/feira-artesanato-dylIHchjb8nNFHin4cRdEXjZ0I8c5I.jpeg" alt="Feira de Artesanato" loading="lazy">                                
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/feira-artesanato-dylIHchjb8nNFHin4cRdEXjZ0I8c5I.jpeg"
+                                        alt="Feira de Artesanato" loading="lazy">
                                 </div>
                                 <div class="gallery-card-content d-flex justify-content-center align-items-center">
-                                    <p class="fs-6 text-white"><span class="me-3">Ver mais</span><span><i class="bi bi-eye-fill"></i></span></p>
+                                    <p class="fs-6 text-white"><span class="me-3">Ver mais</span><span><i
+                                                class="bi bi-eye-fill"></i></span></p>
                                 </div>
                             </div>
                         </a>
@@ -253,56 +267,72 @@
                         <a href="galeria.html">
                             <div class="gallery-card rounded-4" style="position: relative; overflow: hidden;">
                                 <div>
-                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-palco-aereo-K6Qex243x6sT0yZ49dUO244PiKRIYf.jpeg" alt="Preparação de Evento" loading="lazy">                                
+                                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-palco-aereo-K6Qex243x6sT0yZ49dUO244PiKRIYf.jpeg"
+                                        alt="Preparação de Evento" loading="lazy">
                                 </div>
                                 <div class="gallery-card-content d-flex justify-content-center align-items-center">
-                                    <p class="fs-6 text-white"><span class="me-3">Ver mais</span><span><i class="bi bi-eye-fill"></i></span></p>
+                                    <p class="fs-6 text-white"><span class="me-3">Ver mais</span><span><i
+                                                class="bi bi-eye-fill"></i></span></p>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    
+
                     <!-- <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
                         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-palco-aereo-K6Qex243x6sT0yZ49dUO244PiKRIYf.jpeg" alt="Preparação de Evento" loading="lazy">
                     </div> -->
                 </div>
-                <a href="galeria.html" class="btn-style"><button class="btn-style btn btn-warning px-4 py-2 rounded-5 fs-6">Ver mais fotos</button></a>
+                <a href="galeria.html" class="btn-style"><button
+                        class="btn-style btn btn-warning px-4 py-2 rounded-5 fs-6">Ver mais fotos</button></a>
             </div>
         </section>
 
         <section class="cta d-flex justify-content-center align-items-center">
             <div>
-                <h2 style="font-size: 2.2rem; font-weight: 600;"><span> Visite o Palácio de Ferro </span> <br> <span> e Venha conhecer este importante </span> <br> <span> patrimônio cultural de Angola</span></h2>
-                <a href="galeria.html" class="btn-style"><button class="btn-style btn btn-warning px-4 py-2 rounded-5 fs-6 text-dark fw-bold">Informações para visita</button></a>
+                <h2 style="font-size: 2.2rem; font-weight: 600;"><span> Visite o Palácio de Ferro </span> <br> <span> e
+                        Venha conhecer este importante </span> <br> <span> património cultural de Angola</span></h2>
+                <a href="galeria.html" class="btn-style"><button
+                        class="btn-style btn btn-warning px-4 py-2 rounded-5 fs-6 text-dark fw-bold">Informações para
+                        visita</button></a>
 
                 <div class="mt-5" style="margin-bottom: 15rem;">
-                    <div class="cta-card cta-card-1 py-3 px-3 d-flex justify-content-center align-items-center rounded-4">
-                        <div class="rounded-4" style="width: 100%; height: 100%; overflow: hidden; background-image: url(./public/images/cta-card-img2.jpeg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-                            
+                    <div
+                        class="cta-card cta-card-1 py-3 px-3 d-flex justify-content-center align-items-center rounded-4">
+                        <div class="rounded-4"
+                            style="width: 100%; height: 100%; overflow: hidden; background-image: url(./public/images/cta-card-img2.jpeg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+
                         </div>
                     </div>
 
-                    <div class="cta-card cta-card-2 py-3 px-3 d-flex justify-content-center align-items-center rounded-4">
-                        <div class="rounded-4 background-img-styled" style="width: 100%; height: 100%; background-image: url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-social-noturno-kTyFvV0FvxlOQ2cLRtjflL8Af89vh9.jpeg);">
-                            
+                    <div
+                        class="cta-card cta-card-2 py-3 px-3 d-flex justify-content-center align-items-center rounded-4">
+                        <div class="rounded-4 background-img-styled"
+                            style="width: 100%; height: 100%; background-image: url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-social-noturno-kTyFvV0FvxlOQ2cLRtjflL8Af89vh9.jpeg);">
+
                         </div>
                     </div>
 
-                    <div class="cta-card cta-card-3 py-3 px-3 d-flex justify-content-center align-items-center rounded-4">
-                        <div class="rounded-4" style="width: 100%; height: 100%; overflow: hidden; background-image: url(./public/images/cta-card-img5.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-                            
+                    <div
+                        class="cta-card cta-card-3 py-3 px-3 d-flex justify-content-center align-items-center rounded-4">
+                        <div class="rounded-4"
+                            style="width: 100%; height: 100%; overflow: hidden; background-image: url(./public/images/cta-card-img5.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+
                         </div>
                     </div>
 
-                    <div class="cta-card cta-card-4 py-3 px-3 d-flex justify-content-center align-items-center rounded-4">
-                        <div class="rounded-4" style="width: 100%; height: 100%; overflow: hidden; background-image: url(./public/images/cta-card-img4.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-                            
+                    <div
+                        class="cta-card cta-card-4 py-3 px-3 d-flex justify-content-center align-items-center rounded-4">
+                        <div class="rounded-4"
+                            style="width: 100%; height: 100%; overflow: hidden; background-image: url(./public/images/cta-card-img4.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+
                         </div>
                     </div>
 
-                    <div class="cta-card cta-card-5 py-3 px-3 d-flex justify-content-center align-items-center rounded-4">
-                        <div class="rounded-4" style="width: 100%; height: 100%; overflow: hidden; background-image: url(./public/images/cta-card-img3.jpeg); background-position: center; background-repeat: no-repeat; background-size: cover;">
-                            
+                    <div
+                        class="cta-card cta-card-5 py-3 px-3 d-flex justify-content-center align-items-center rounded-4">
+                        <div class="rounded-4"
+                            style="width: 100%; height: 100%; overflow: hidden; background-image: url(./public/images/cta-card-img3.jpeg); background-position: center; background-repeat: no-repeat; background-size: cover;">
+
                         </div>
                     </div>
 
@@ -315,46 +345,17 @@
         </section>
     </main>
 
-    <footer class="mt-5">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Palácio de Ferro</h3>
-                    <p>Patrimônio Cultural de Angola</p>
-                    <p>Luanda, Angola</p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="historia.html">História</a></li>
-                        <li><a href="galeria.html">Galeria</a></li>
-                        <li><a href="rubricas.html">Rubricas</a></li>
-                        <li><a href="especial.html">Especial</a></li>
-                        <li><a href="visita.html">Visita</a></li>
-                        <li><a href="agenda.html">Agenda</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contacto</h3>
-                    <p><i class="fas pe-2 fa-phone" aria-hidden="true"></i> <span>+244 930749234</span> </p>
-                    <p><i class="fas pe-2 fa-envelope" aria-hidden="true"></i><span>info@palaciodeferro.ao</span></p>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Palácio de Ferro. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer" class="mt-5">
+        <script>
+            fetch("./componentes/footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer").innerHTML = data;
+                });
+        </script>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informações para Visita | Palácio de Ferro</title>
     <link rel="stylesheet" href="css/style.css">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,48 +30,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header>
-        <nav class="px-5 py-4 navbar navbar-expand-md" style="background-color: transparent;">
-            <div class="container-fluid">
-                <a class="navbar-brand ms-5 fs-5" href="#" style="color: #F79A00; font-weight: 500;">Palácio de ferro</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end me-5" id="navbarNav">
-                    <ul class="navbar-nav row gap-2">
-                        <li class="nav-item col">
-                            <a class="nav-link" aria-current="page" href="index.html">Início</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="historia.html">História</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="galeria.html">Galeria</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="rubricas.html">Rubricas</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="especial.html">Especial</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link active" href="visita.html">Visita</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="agenda.html">Agenda</a>
-                        </li>
-                        <li class="nav-item col">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <header id="navbar">
+        <script>
+            fetch("./componentes/navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar").innerHTML = data;
+                });
+        </script>
     </header>
 
-    <section class="page-header background-img-styled mb-4" style="background-image: url(./public/images/cta-background.avif);">
+    <section class="page-header background-img-styled mb-4"
+        style="background-image: url(./public/images/cta-background.avif);">
         <div class="container justify-content-center align-items-center">
             <h1>Informações para Visita</h1>
         </div>
@@ -74,8 +53,9 @@
     <section>
         <div class="container">
             <div class="row justify-content-center">
-                
-                <div class="Info-card pt-3 d-flex align-items-center flex-column col-sm-12 mb-3 col-md-6 col-lg-4 col-xl-3 rounded-3">
+
+                <div
+                    class="Info-card pt-3 d-flex align-items-center flex-column col-sm-12 mb-3 col-md-6 col-lg-4 col-xl-3 rounded-3">
                     <span> <i class="fas fa-clock"></i></span>
                     <h3 class="fs-3 mt-3 mb-4">Horario de Funcionamento</h3>
                     <p><span class="fw-bold">Segunda a sexta:</span> 9h às 17h</p>
@@ -84,26 +64,31 @@
                     <p><span class="fw-bold">Feriados:</span> Verificar disponibilidade</p>
                 </div>
 
-               <div class="Info-card py-3 d-flex align-items-center flex-column col-sm-12 mb-3 col-md-6 col-lg-4 col-xl-3 rounded-3">
-                    <span>  <i class="fas fa-ticket-alt"></i> </span>
+                <div
+                    class="Info-card py-3 d-flex align-items-center flex-column col-sm-12 mb-3 col-md-6 col-lg-4 col-xl-3 rounded-3">
+                    <span> <i class="fas fa-ticket-alt"></i> </span>
                     <h3 class="fs-3 mt-3 mb-4">Ingressos</h3>
                     <p><span class="fw-bold">Adultos:</span> 1.500 Kz</p>
                     <p><span class="fw-bold">Estudantes:</span> 750 kz</p>
                     <p><span class="fw-bold">Crianças (até 12 anos):</span> Gratuito</p>
-                    <p><span class="fw-bold">Feriados:</span> Ingressos podem ser adquiridos na bilheteria local ou online</p>
-                    <a href="#" class="btn-style"><button class="btn-style btn btn-warning px-4 py-2 rounded-5 fs-6">Comprar ingressos</button></a>
+                    <p><span class="fw-bold">Feriados:</span> Ingressos podem ser adquiridos na bilheteria local ou
+                        online</p>
+                    <a href="#" class="btn-style"><button
+                            class="btn-style btn btn-warning px-4 py-2 rounded-5 fs-6">Comprar ingressos</button></a>
                 </div>
 
-                <div class="Info-card pt-3 d-flex align-items-center flex-column col-sm-12 mb-3 col-md-6 col-lg-4 col-xl-3 rounded-3">
-                    <span>  <i class="fas fa-map-marker-alt"></i> </span>
+                <div
+                    class="Info-card pt-3 d-flex align-items-center flex-column col-sm-12 mb-3 col-md-6 col-lg-4 col-xl-3 rounded-3">
+                    <span> <i class="fas fa-map-marker-alt"></i> </span>
                     <h3 class="fs-3 mt-3 mb-4">Localização</h3>
                     <p>O Palácio de Ferro está localizado no centro histórico de Luanda, Angola.</p>
                     <p><span class="fw-bold">Endereço:</span>Avenida 4 de Fevereiro, Luanda, Angola</p>
                     <p>Próximo à Baía de Luanda e ao Banco Nacional de Angola.</p>
                 </div>
 
-               <div class="Info-card pt-3 d-flex align-items-center flex-column col-sm-12 mb-3 col-md-6 col-lg-4 col-xl-3 rounded-3">
-                    <span>  <i class="fas fa-route"></i> </span>
+                <div
+                    class="Info-card pt-3 d-flex align-items-center flex-column col-sm-12 mb-3 col-md-6 col-lg-4 col-xl-3 rounded-3">
+                    <span> <i class="fas fa-route"></i> </span>
                     <h3 class="fs-3 mt-3 mb-4">Como chegar</h3>
                     <p><span class="fw-bold">De táxi:</span> Disponível em toda a cidade de Luanda.</p>
                     <p><span class="fw-bold">De ônibus:</span> Linhas 10, 15 e 22 param próximo ao Palácio.</p>
@@ -118,7 +103,9 @@
         <div class="container">
             <h2>Mapa</h2>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.5576893372144!2d13.2343!3d-8.8147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwNDgnNTMuMCJTIDEzwrAxNCcwMy41IkU!5e0!3m2!1spt-PT!2sao!4v1620000000000!5m2!1spt-PT!2sao" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.5576893372144!2d13.2343!3d-8.8147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwNDgnNTMuMCJTIDEzwrAxNCcwMy41IkU!5e0!3m2!1spt-PT!2sao!4v1620000000000!5m2!1spt-PT!2sao"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -127,9 +114,10 @@
         <div class="container mt-5">
             <h2>Visitas Guiadas</h2>
             <div class="tours-grid">
-                <div class="tour-card">
+                <div class="tour-card scroll-down-animation">
                     <div class="tour-image">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.24%20%282%29-IbGIFVwAot2ZGWgzmm6OmyJVqjvULJ.jpeg" alt="Tour Histórico">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.24%20%282%29-IbGIFVwAot2ZGWgzmm6OmyJVqjvULJ.jpeg"
+                            alt="Tour Histórico">
                     </div>
 
                     <div class="tour-content">
@@ -141,14 +129,17 @@
                             <li><i class="fas fa-language"></i> Idiomas: Português, Inglês</li>
                         </ul>
                         <h6 class="tour-price">2.000 Kwanzas por pessoa</h6>
-                        <a href="#" class="btn-style"><button class="btn-style btn btn-warning text-white px-4 py-2 rounded-5" style="font-size: 0.89rem;">Reservar</button></a>
+                        <a href="#" class="btn-style"><button
+                                class="btn-style btn btn-warning text-white px-4 py-2 rounded-5"
+                                style="font-size: 0.89rem;">Reservar</button></a>
                     </div>
 
                 </div>
 
-                <div class="tour-card">
+                <div class="tour-card scroll-down-animation">
                     <div class="tour-image">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.24-gkUaQhUxu7geNVLgyZxnUQhk45aoNO.jpeg" alt="Tour Arquitetônico">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.24-gkUaQhUxu7geNVLgyZxnUQhk45aoNO.jpeg"
+                            alt="Tour Arquitetônico">
                     </div>
 
                     <div class="tour-content">
@@ -160,14 +151,17 @@
                             <li><i class="fas fa-language"></i> Idiomas: Português, Inglês, Francês</li>
                         </ul>
                         <h6 class="tour-price">2.500 Kwanzas por pessoa</h6>
-                        <a href="#" class="btn-style"><button class="btn-style btn btn-warning text-white px-4 py-2 rounded-5" style="font-size: 0.89rem;">Reservar</button></a>
+                        <a href="#" class="btn-style"><button
+                                class="btn-style btn btn-warning text-white px-4 py-2 rounded-5"
+                                style="font-size: 0.89rem;">Reservar</button></a>
                     </div>
 
                 </div>
 
-                <div class="tour-card">
+                <div class="tour-card scroll-down-animation">
                     <div class="tour-image">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.23%20%281%29-ojM1GhY5mU2eGyfUHbtirZ2J2fY6sD.jpeg" alt="Tour Fotográfico">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.23%20%281%29-ojM1GhY5mU2eGyfUHbtirZ2J2fY6sD.jpeg"
+                            alt="Tour Fotográfico">
                     </div>
                     <div class="tour-content">
                         <h3>Tour Fotográfico</h3>
@@ -178,7 +172,9 @@
                             <li><i class="fas fa-language"></i> Idiomas: Português, Inglês</li>
                         </ul>
                         <h6 class="tour-price">3.000 Kwanzas por pessoa</h6>
-                        <a href="#" class="btn-style"><button class="btn-style btn btn-warning text-white px-4 py-2 rounded-5" style="font-size: 0.89rem;">Reservar</button></a>
+                        <a href="#" class="btn-style"><button
+                                class="btn-style btn btn-warning text-white px-4 py-2 rounded-5"
+                                style="font-size: 0.89rem;">Reservar</button></a>
                     </div>
                 </div>
             </div>
@@ -189,20 +185,22 @@
         <div class="container mt-5">
             <h2>Perguntas Frequentes</h2>
         </div>
-    </section> 
+    </section>
 
     <section class="container mb-5">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         É necessário reservar com antecedência?
                     </button>
                 </h2>
 
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <p>Para visitas individuais não é necessário reservar, mas para grupos acima de 10 pessoas recomendamos fazer uma reserva com pelo menos 48 horas de antecedência.</p>  
+                        <p>Para visitas individuais não é necessário reservar, mas para grupos acima de 10 pessoas
+                            recomendamos fazer uma reserva com pelo menos 48 horas de antecedência.</p>
                     </div>
 
                 </div>
@@ -210,53 +208,61 @@
 
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         É permitido fotografar dentro do Palácio?
                     </button>
                 </h2>
 
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <p>Sim, é permitido fotografar para uso pessoal. Para uso comercial ou profissional, é necessário obter uma autorização prévia.</p>
+                        <p>Sim, é permitido fotografar para uso pessoal. Para uso comercial ou profissional, é
+                            necessário obter uma autorização prévia.</p>
                     </div>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    O Palácio é acessível para pessoas com mobilidade reduzida?
-                </button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        O Palácio é acessível para pessoas com mobilidade reduzida?
+                    </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <p>Sim, o Palácio possui rampas de acesso e elevadores para garantir a acessibilidade a todos os visitantes.</p>
-                </div>
+                    <div class="accordion-body">
+                        <p>Sim, o Palácio possui rampas de acesso e elevadores para garantir a acessibilidade a todos os
+                            visitantes.</p>
+                    </div>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                    Há estacionamento disponível?
-                </button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                        Há estacionamento disponível?
+                    </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <p>Não há estacionamento próprio, mas existem estacionamentos públicos nas proximidades.</p>                </div>
+                    <div class="accordion-body">
+                        <p>Não há estacionamento próprio, mas existem estacionamentos públicos nas proximidades.</p>
+                    </div>
                 </div>
             </div>
 
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    Há estacionamento disponível?
-                </button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Há estacionamento disponível?
+                    </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <p>Sim, temos guias disponíveis em português, inglês e francês. Para outros idiomas, é necessário solicitar com antecedência.</p>
-                </div>
+                    <div class="accordion-body">
+                        <p>Sim, temos guias disponíveis em português, inglês e francês. Para outros idiomas, é
+                            necessário solicitar com antecedência.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -300,4 +306,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
