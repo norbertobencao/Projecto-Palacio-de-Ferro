@@ -151,15 +151,21 @@ html {
 
 
 
+/* Oswald Font */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+/* Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 
 body {
   overflow-x: hidden;
-  font-family: "Prata", serif;
+  /* font-family: "Roboto", sans-serif; */
   font-weight: 400;
   font-style: normal;
 }
@@ -193,9 +199,9 @@ h5,
 h6 {
   line-height: 1.2;
   color: var(--primary-color);
-  font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 600;
+  font-family: "Oswald", sans-serif;
 }
 
 h1 {
@@ -224,7 +230,6 @@ h6 {
 
 p {
   margin-bottom: 1rem;
-  font-family: "Prata", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -285,7 +290,6 @@ a:focus-visible {
 /* ===== LISTAS ===== */
 ul {
   list-style: none;
-  font-family: "Prata", serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -668,7 +672,6 @@ header .container {
 }
 
 .img-text-align-text {
-  font-family: "Prata", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1rem;
@@ -676,10 +679,9 @@ header .container {
 }
 
 .img-text-align-header {
-  font-family: "Oswald", sans-serif;
   font-size: 2.7rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   width: 20rem;
   margin-bottom: 2rem;
 }
@@ -1125,17 +1127,23 @@ footer {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(5px);
+  position: relative;
 }
 
 /* Substituir a animação do modal-content */
 .modal-content {
-  margin: auto;
+  /* margin: auto; */
   display: block;
-  max-width: 90%;
+  max-width: 60%;
   max-height: 80%;
   border-radius: var(--border-radius);
-  animation: modalZoom 0.3s ease-out;
+  /* animation: modalZoom 0.3s ease-out; */
   will-change: transform, opacity;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .close-modal {
@@ -1158,7 +1166,7 @@ footer {
 
 .modal-caption {
   margin: auto;
-  display: block;
+  display: none;
   width: 80%;
   max-width: 700px;
   text-align: center;
@@ -1185,6 +1193,7 @@ footer {
   user-select: none;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
+  text-decoration: none;
 }
 
 .next {
@@ -1386,7 +1395,6 @@ footer {
     left: 1rem;
     border-radius: 100%;
     color: white;
-    font-family: "Prata", serif;
     font-weight: 500;
     font-style: normal;
     font-size: 1.1rem;
@@ -1660,7 +1668,7 @@ footer {
 }
 
 .tour-content h3 {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .tour-content ul {
@@ -1839,7 +1847,6 @@ footer {
   justify-content: center;
   align-items: center;
   font-weight: 300;
-  font-family: 'oswald';
   font-style: normal;
 }
 
@@ -1894,7 +1901,6 @@ footer {
   top: 1rem;
   left: 1rem;
   background-color: #fff;
-  font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9rem;
@@ -2032,7 +2038,6 @@ footer {
 .event-description {
   margin: 1rem 0;
   line-height: 1.5;
-  font-family: 2rem;
 }
 
 .event-price {
@@ -2135,7 +2140,6 @@ footer {
 
 .contact-card-inf span {
   font-size: 0.8rem;
-  font-family: "Oswald", sans-serif;
   font-weight: 300;
   font-style: normal;
   color: #8C8C8C;
@@ -2143,14 +2147,13 @@ footer {
 
 .contact-card-inf h3 {
   font-size: 1.3rem;
-  font-weight: 300;
-  margin-bottom: 0rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
 }
 
 .contact-card-inf p {
   font-size: 0.9rem;
   color: #8C8C8C;
-  font-family: "Oswald", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
@@ -2180,4 +2183,43 @@ footer {
     margin-bottom: 2rem;
   }
 
+}
+
+/*################ PARCEIROS ################*/
+.caroussel-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+}
+
+.caroussel-animation {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  transform: translateX(-100%);
+  animation: caroussel-animation 30s linear infinite;
+}
+
+.caroussel-item {
+  flex: 0 0 auto;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caroussel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes caroussel-animation {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }

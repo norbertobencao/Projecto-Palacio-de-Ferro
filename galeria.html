@@ -41,6 +41,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
 
     <header id="navbar">
@@ -62,16 +63,13 @@
 
     <section class="gallery-filters">
         <div class="container">
-            <!-- <CHANGE> Atualizados os filtros com as novas categorias -->
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="exposicoes">Exposições</button>
-                <button class="filter-btn" data-filter="corporativos">Corporativos</button>
+                <button class="filter-btn" data-filter="festBalumuka">Fest. Balumuka</button>
+                <button class="filter-btn" data-filter="trajetoria">Trajectória</button>
+                <button class="filter-btn" data-filter="cineNoPf">Cine no PF</button>
+                <button class="filter-btn" data-filter="arteDaPalavra">Arte da Palavra</button>
+                <button class="filter-btn" data-filter="sextaFeiraDeTrova">Sexta-feira de trova</button>
                 <button class="filter-btn" data-filter="festivais">Festivais</button>
-                <button class="filter-btn" data-filter="concertos">Concertos</button>
-                <button class="filter-btn" data-filter="performances">Performances</button>
-                <button class="filter-btn" data-filter="cinema">Cinema</button>
-                <button class="filter-btn" data-filter="multidisciplinares">Multidisciplinares</button>
                 <button class="filter-btn" data-filter="diversos">Diversos</button>
             </div>
         </div>
@@ -79,168 +77,8 @@
 
     <section class="gallery-main mb-4">
         <div class="container">
-            <div class="gallery-grid">
-                <!-- <CHANGE> Reorganizadas as imagens com as novas categorias -->
-
-                <!-- EXPOSIÇÕES -->
-                <div class="gallery-item" data-category="exposicoes">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/discurso-exposicao-veCRYDFnwzskWF6N0voAXTqlbsj4FB.jpeg"
-                        alt="Exposição Angola Kiesse">
-                    <div class="gallery-caption">
-                        <h3>Exposição Angola Kiesse</h3>
-                        <p>Abertura da exposição cultural</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="exposicoes">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.25%20%281%29-nRQ32vAu2NGXR95kCxR1piqFChccI1.jpeg"
-                        alt="Ilustração histórica do Palácio">
-                    <div class="gallery-caption">
-                        <h3>Ilustração Histórica</h3>
-                        <p>Desenho técnico da fachada do Palácio</p>
-                    </div>
-                </div>
-
-                <!-- CORPORATIVOS -->
-                <div class="gallery-item" data-category="corporativos">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/conferencia-interna-20J2JDF2lI6LTqRraUTSidauTgH11G.jpeg"
-                        alt="Conferência corporativa">
-                    <div class="gallery-caption">
-                        <h3>Conferência Corporativa</h3>
-                        <p>Palestra em ambiente íntimo</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="corporativos">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/conferencia-auditorio-u1hHjugZIDpJCl0AXGXMqjiWXFstMm.jpeg"
-                        alt="Conferência no auditório">
-                    <div class="gallery-caption">
-                        <h3>Auditório Moderno</h3>
-                        <p>Conferência no espaço audiovisual</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="corporativos">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/entrevista-jornalistas-OVzCLyfIZft7dftvz9s6e2mcgNVCvb.jpeg"
-                        alt="Entrevista com jornalistas">
-                    <div class="gallery-caption">
-                        <h3>Cobertura Mediática</h3>
-                        <p>Entrevista durante evento cultural</p>
-                    </div>
-                </div>
-
-                <!-- FESTIVAIS -->
-                <div class="gallery-item" data-category="festivais">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-social-noturno-kTyFvV0FvxlOQ2cLRtjflL8Af89vh9.jpeg"
-                        alt="Festival cultural noturno">
-                    <div class="gallery-caption">
-                        <h3>Festival Cultural</h3>
-                        <p>Celebração cultural no Palácio de Ferro</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="festivais">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/feira-artesanato-dylIHchjb8nNFHin4cRdEXjZ0I8c5I.jpeg"
-                        alt="Feira de artesanato">
-                    <div class="gallery-caption">
-                        <h3>Feira de Artesanato</h3>
-                        <p>Exposição de produtos locais</p>
-                    </div>
-                </div>
-
-                <!-- CONCERTOS -->
-                <div class="gallery-item" data-category="concertos">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-palco-aereo-K6Qex243x6sT0yZ49dUO244PiKRIYf.jpeg"
-                        alt="Preparação de palco para concerto">
-                    <div class="gallery-caption">
-                        <h3>Preparação de Concerto</h3>
-                        <p>Vista aérea da montagem do palco</p>
-                    </div>
-                </div>
-
-                <!-- PERFORMANCES -->
-                <div class="gallery-item" data-category="performances">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evento-noturno-tenda-0uhE8qJaU1fxgsOTfg54hIJ3C5Hubr.jpeg"
-                        alt="Performance ao ar livre">
-                    <div class="gallery-caption">
-                        <h3>Performance ao Ar Livre</h3>
-                        <p>Cerimônia formal no pátio do Palácio</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="performances">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/palacio-noturno-evento-Ce3kKKZQb6k0eDA0YSVaRpGZBFqJVm.jpeg"
-                        alt="Evento com tapete vermelho">
-                    <div class="gallery-caption">
-                        <h3>Evento Formal</h3>
-                        <p>Cerimônia com tapete vermelho</p>
-                    </div>
-                </div>
-
-                <!-- DIVERSOS -->
-                <div class="gallery-item" data-category="diversos">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.26-Zn2rd43CSRGF321po27uz6JWbOJN6w.jpeg"
-                        alt="Fachada principal do Palácio">
-                    <div class="gallery-caption">
-                        <h3>Fachada Principal</h3>
-                        <p>Vista frontal do Palácio de Ferro</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="diversos">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.23%20%281%29-ojM1GhY5mU2eGyfUHbtirZ2J2fY6sD.jpeg"
-                        alt="Vista lateral do Palácio">
-                    <div class="gallery-caption">
-                        <h3>Vista Lateral</h3>
-                        <p>Perspectiva lateral da estrutura</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="diversos">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.24-gkUaQhUxu7geNVLgyZxnUQhk45aoNO.jpeg"
-                        alt="Entrada do Palácio">
-                    <div class="gallery-caption">
-                        <h3>Entrada Principal</h3>
-                        <p>Vista da entrada com escadarias duplas</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="diversos">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.23-UsZqbypSAH1kWAd34CuWn7oieNe5lr.jpeg"
-                        alt="Palácio à noite">
-                    <div class="gallery-caption">
-                        <h3>Vista Noturna</h3>
-                        <p>O Palácio iluminado à noite</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="diversos">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.25-1b6HkdGZ1M19Lmt2oWQTBBraxy0DkU.jpeg"
-                        alt="Vista completa do Palácio">
-                    <div class="gallery-caption">
-                        <h3>Vista Completa</h3>
-                        <p>Panorama do edifício histórico</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="diversos">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.24%20%281%29-61QZx2Xfl3feYu5zyDOMZvahJttth4.jpeg"
-                        alt="Evento formal">
-                    <div class="gallery-caption">
-                        <h3>Evento Formal</h3>
-                        <p>Cerimônia especial no Palácio</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="diversos">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-05-21%20at%2013.10.24%20%282%29-IbGIFVwAot2ZGWgzmm6OmyJVqjvULJ.jpeg"
-                        alt="Vista exterior do Palácio">
-                    <div class="gallery-caption">
-                        <h3>Vista Exterior</h3>
-                        <p>Arquitetura única do Palácio de Ferro</p>
-                    </div>
-                </div>
-            </div>
+            <!-- Container vazio, o JS vai preencher -->
+            <div class="gallery-grid"></div>
         </div>
     </section>
 
@@ -263,6 +101,7 @@
     </div>
 
     <script src="js/script.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 
 </html>

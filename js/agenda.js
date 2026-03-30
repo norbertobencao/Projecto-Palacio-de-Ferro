@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const delay = prefersReducedMotion ? 0 : index * 50
 
           setTimeout(() => {
-            card.style.display = "block"
+            card.style.display = ""
             
             // Reset dos estilos inline antes de aplicar novos
             if (prefersReducedMotion) {
