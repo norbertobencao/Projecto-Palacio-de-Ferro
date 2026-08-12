@@ -2456,3 +2456,103 @@ footer {
     font-size: .95rem;
   }
 }
+
+/* Subitens verticais de Multidisciplinar dentro do dropdown de Rubrica */
+.multidisciplinar-subitems {
+  display: none;
+  padding-left: 1rem;
+}
+
+.multidisciplinar-subitems.show {
+  display: block;
+}
+
+.multidisciplinar-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.multidisciplinar-toggle::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-0.15rem);
+  transition: transform 0.15s ease;
+}
+
+.multidisciplinar-toggle.is-open::before {
+  transform: rotate(225deg) translate(-0.1rem, -0.1rem);
+}
+
+#rubricas-grid > .festival-card {
+  display: none;
+}
+
+body.festivais-view #rubricas-grid > .col:not(.festival-card) {
+  display: none;
+}
+
+body.festivais-view #rubricas-grid > .festival-card {
+  display: block;
+}
+
+/* Dimensões e tipografia apenas para os cards de rubricas */
+#rubricas-grid .card {
+  display: flex;
+  flex-direction: column;
+}
+
+#rubricas-grid .card-img-top {
+  height: 14rem !important;
+  object-fit: cover;
+}
+
+#rubricas-grid .card-body {
+  padding: 1.25rem;
+}
+
+#rubricas-grid .card-title {
+  font-size: 1.375rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+#rubricas-grid .card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#rubricas-grid .rubrica-details {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#rubricas-grid .rubrica-details button {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.875rem;
+}
+
+#rubricas-grid .card-top-inf {
+  font-size: 0.8125rem;
+}
+
+#rubricas-grid .card-span h6 {
+  font-size: 0.875rem;
+}
+
+#rubricas-grid .card-span h6 span {
+  font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+  #rubricas-grid .card-img-top {
+    height: 12rem !important;
+  }
+
+  #rubricas-grid .card-body {
+    padding: 1rem;
+  }
+}

@@ -1,4 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("click", (event) => {
+    const toggle = event.target.closest(".multidisciplinar-toggle")
+    if (!toggle) return
+
+    event.preventDefault()
+    event.stopPropagation()
+
+    const subitems = toggle.nextElementSibling
+    const isExpanded = subitems.classList.toggle("show")
+    toggle.setAttribute("aria-expanded", isExpanded)
+    toggle.classList.toggle("is-open", isExpanded)
+  }, true)
+
+  const rubricasGrid = document.getElementById("rubricas-grid")
+  if (rubricasGrid) {
+    const updateRubricasView = () => {
+      document.body.classList.toggle("festivais-view", window.location.hash === "#festivais")
+    }
+
+    window.addEventListener("hashchange", updateRubricasView)
+    updateRubricasView()
+  }
+
   let sliderInterval = null
   let isSliderPaused = false
   let currentSlide = 0
