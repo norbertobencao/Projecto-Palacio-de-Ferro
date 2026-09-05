@@ -158,16 +158,163 @@ html {
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 
+/* Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 /* Roboto Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-
 body {
   overflow-x: hidden;
-  /* font-family: "Roboto", sans-serif; */
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+/* ===== SALAS / GALERIAS ===== */
+.salas-page {
+  background-color: #fff;
+  color: #000;
+  font-family: "Inter", sans-serif;
+}
+
+.salas-hero {
+  padding: 6rem 0 3rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.salas-hero h1,
+.salas-hero p {
+  color: #fff;
+}
+
+.salas-hero h1 {
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+.salas-hero p {
+  font-size: 1rem;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.salas-container {
+  max-width: 1300px;
+  padding: 0 1rem 4rem;
+}
+
+.sala-block {
+  margin-bottom: 4.5rem;
+}
+
+.sala-header {
+  margin-bottom: 1.5rem;
+}
+
+.sala-subtitle {
+  display: block;
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  color: #000;
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.sala-header h2 {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 300;
+  color: #666;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.salas-page .navbar-nav .nav-link,
+.salas-page .navbar-nav .dropdown-toggle,
+.salas-page .navbar-nav .dropdown-item {
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+}
+
+.salas-page .navbar-brand {
+  font-size: 1.25rem !important;
+}
+
+.navbar-nav .nav-link.active-page,
+.navbar-nav .dropdown-toggle.active-page,
+.navbar-nav .dropdown-item.active-page {
+  color: #333333 !important;
+  font-weight: 500 !important;
+}
+
+.scroll-gallery {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(55vw, 55vw);
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.75rem;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll-gallery::-webkit-scrollbar { height: 0; display: none; }
+
+.scroll-gallery img {
+  display: block;
+  width: 100%;
+  height: min(60vh, 520px);
+  object-fit: cover;
+  border-radius: 18px;
+  scroll-snap-align: center;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.scroll-gallery img:hover {
+  transform: scale(1.02);
+}
+
+.scroll-gallery::after {
+  content: "";
+  width: 1rem;
+}
+
+.sala-block:not(:last-child) {
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 992px) {
+  .scroll-gallery {
+    grid-auto-columns: minmax(80vw, 80vw);
+  }
+
+  .scroll-gallery img {
+    height: min(50vh, 420px);
+  }
+}
+
+@media (max-width: 640px) {
+  .salas-hero {
+    padding: 4rem 0 2rem;
+  }
+
+  .scroll-gallery {
+    gap: 0.75rem;
+    grid-auto-columns: minmax(85vw, 85vw);
+  }
+
+  .scroll-gallery img {
+    height: 42vh;
+  }
 }
 
 /* ===== UTILITÁRIOS ===== */
@@ -292,10 +439,6 @@ ul {
   list-style: none;
   font-weight: 400;
   font-style: normal;
-}
-
-.nav-link {
-  border: 2px solid red;
 }
 
 /* ===== IMAGENS ===== */
@@ -1257,18 +1400,19 @@ footer {
   position: relative;
   width: 50%;
   margin-bottom: 2rem;
+  will-change: transform, opacity;
 }
 
 .timeline-item:nth-child(odd) {
   left: 0;
-  animation: timeline-item-left-large-screen-animation .5s ease-in-out;
+  animation: timeline-item-left-large-screen-animation .7s cubic-bezier(0.16, 1, 0.3, 1) both;
   animation-timeline: view();
   animation-range: cover 0% cover 25%;
 }
 
 .timeline-item:nth-child(even) {
   left: 50%;
-  animation: timeline-item-right-large-screen-animation .5s ease-in-out;
+  animation: timeline-item-right-large-screen-animation .7s cubic-bezier(0.16, 1, 0.3, 1) both;
   animation-timeline: view();
   animation-range: cover 0% cover 40%;
 }
@@ -1426,10 +1570,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: timeline-item-circle-animation 2s;
+    animation: timeline-item-circle-animation .8s ease-out both;
     animation-timeline: view();
     animation-range: cover 0% cover 60%;
-    animation-delay: 2s;
+    animation-delay: 0.2s;
   }
 
 
@@ -1438,7 +1582,7 @@ footer {
 
 
   .timeline-item {
-    animation: timeline-item-animation .8s ease-in-out;
+    animation: timeline-item-animation .8s ease-out both;
     animation-timeline: view();
     animation-range: cover 0% cover 30%;
   }
@@ -1519,6 +1663,18 @@ footer {
 
 .fact-box.animate-element.animate-in {
   transform: scale(1);
+}
+
+#rubricas-grid .card.animate-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+
+#rubricas-grid .card.animate-element.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .fact-box {
@@ -2183,6 +2339,29 @@ footer {
   font-style: normal;
 }
 
+.contact-card {
+  width: 100%;
+}
+
+.contact-card-send-email {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-card-inf div i,
+  .contact-phone-icon {
+    font-size: 3.5rem;
+  }
+
+  .contact-card-send-email .card-body {
+    padding: 1rem;
+  }
+}
+
 .contact-card-inf div i {
   font-size: 5rem;
   margin: 1.5rem 0;
@@ -2473,21 +2652,8 @@ footer {
   gap: 0.65rem;
 }
 
-.multidisciplinar-toggle::before {
-  content: "";
-  width: 0.5rem;
-  height: 0.5rem;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: rotate(45deg) translateY(-0.15rem);
-  transition: transform 0.15s ease;
-}
-
-.multidisciplinar-toggle.is-open::before {
-  transform: rotate(225deg) translate(-0.1rem, -0.1rem);
-}
-
-#rubricas-grid > .festival-card {
+#rubricas-grid > .festival-card,
+#rubricas-grid > .feiras-card {
   display: none;
 }
 
@@ -2496,6 +2662,14 @@ body.festivais-view #rubricas-grid > .col:not(.festival-card) {
 }
 
 body.festivais-view #rubricas-grid > .festival-card {
+  display: block;
+}
+
+body.feiras-view #rubricas-grid > .col:not(.feiras-card) {
+  display: none;
+}
+
+body.feiras-view #rubricas-grid > .feiras-card {
   display: block;
 }
 

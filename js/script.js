@@ -16,11 +16,29 @@ document.addEventListener("DOMContentLoaded", () => {
   if (rubricasGrid) {
     const updateRubricasView = () => {
       document.body.classList.toggle("festivais-view", window.location.hash === "#festivais")
+      document.body.classList.toggle("feiras-view", window.location.hash === "#feiras")
     }
 
     window.addEventListener("hashchange", updateRubricasView)
     updateRubricasView()
   }
+
+  const initNavbarActivePage = () => {
+    const currentFile = window.location.pathname.split('/').pop() || 'index.html'
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item, .navbar-nav .dropdown-toggle')
+
+    navLinks.forEach((link) => {
+      const href = link.getAttribute('href')
+      if (!href) return
+
+      const targetFile = href.split('/').pop().split('#')[0]
+      if (targetFile === currentFile || (currentFile === '' && targetFile === 'index.html')) {
+        link.classList.add('active-page')
+      }
+    })
+  }
+
+  window.addEventListener('load', initNavbarActivePage)
 
   let sliderInterval = null
   let isSliderPaused = false
@@ -457,7 +475,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     }, observerOptions)
 
-    const elementsToAnimate = safeQuerySelectorAll(".feature-box, .gallery-item, .rubrica-card, .especial-card")
+    const elementsToAnimate = safeQuerySelectorAll(".feature-box, .gallery-item, .rubrica-card, .especial-card, #rubricas-grid .card")
 
     elementsToAnimate.forEach((element, index) => {
       element.classList.add("animate-element")
