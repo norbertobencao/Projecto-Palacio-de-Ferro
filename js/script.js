@@ -602,9 +602,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initErrorHandling()
 
-    console.log("✅ Todas as funcionalidades inicializadas com sucesso!")
+    console.log(" Todas as funcionalidades inicializadas com sucesso!")
   } catch (error) {
-    console.error("❌ Erro na inicialização:", error)
+    console.error(" Erro na inicialização:", error)
   }
 
   window.addEventListener("beforeunload", () => {

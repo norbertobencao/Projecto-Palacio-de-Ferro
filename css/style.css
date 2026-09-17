@@ -176,7 +176,7 @@ body {
 .salas-page {
   background-color: #fff;
   color: #000;
-  font-family: "Inter", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .salas-hero {
@@ -924,7 +924,7 @@ header .container {
   padding: 5rem 0;
   overflow: hidden;
   position: relative;
-  background-image: url(../public/images/cta-background.avif);
+  background-image: url(../public/images/banner.jpg);
   background-position: center;
   background-size: cover;
 }
